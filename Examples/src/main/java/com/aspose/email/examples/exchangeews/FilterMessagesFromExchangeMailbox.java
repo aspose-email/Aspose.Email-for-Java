@@ -2,19 +2,26 @@ package com.aspose.email.examples.exchangeews;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import com.aspose.email.EWSClient;
 import com.aspose.email.ExchangeMessageInfoCollection;
+import com.aspose.email.ExchangeMessagePageInfo;
 import com.aspose.email.ExchangeQueryBuilder;
 import com.aspose.email.IEWSClient;
 import com.aspose.email.MailQuery;
 import com.aspose.email.MailQueryBuilder;
 
+
 public class FilterMessagesFromExchangeMailbox {
 
 	public static void main(String[] args) {
+		
+		//Note: You will need a valid Exchange server account for testing these samples
 		filterMessagesUsingEWS();
 		filterMessagesBasedOnTodayDate();
 		filterMessagesBasedOnDateRange();
@@ -111,5 +118,33 @@ public class FilterMessagesFromExchangeMailbox {
 		ExchangeQueryBuilder builder1 = new ExchangeQueryBuilder();
 		builder1.getItemSize().greater(80000);
 		//ExEnd: GetMessagesByMessageSize
+	}
+	
+	public static void filteringMessageswithPagingSupport()
+	{
+		IEWSClient client = EWSClient.getEWSClient("exchange server uri", "username", "password");
+		
+		//ExStart: FilteringMessageswithPagingSupport
+		int itemsPerPage = 5;
+		String subj = UUID.randomUUID().toString() + " - " + "Query 1"; 
+		MailQueryBuilder queryBuilder = new MailQueryBuilder();
+		queryBuilder.getSubject().contains(subj);
+		MailQuery query = queryBuilder.getQuery();
+		List<ExchangeMessagePageInfo> pages = new ArrayList<ExchangeMessagePageInfo>();
+		ExchangeMessagePageInfo pageInfo = client.listMessagesByPage(client.getMailboxInfo().getInboxUri(), 
+		        query, itemsPerPage);
+		pages.add(pageInfo);
+		int count = pageInfo.getItems().size();
+		System.out.println("Total Count: " + count);
+		while (!pageInfo.getLastPage())
+		{
+		    pageInfo = client.listMessagesByPage(client.getMailboxInfo().getInboxUri(), 
+		            								query, itemsPerPage, pageInfo.getPageOffset() + 1);
+		    pages.add(pageInfo);
+		    count += pageInfo.getItems().size();
+		}
+		System.out.println("Total Count: " + count);
+		//ExEnd: FilteringMessageswithPagingSupport
+		
 	}
 }
