@@ -1,6 +1,7 @@
 package com.aspose.email.examples.email;
 
 import com.aspose.email.Appointment;
+import com.aspose.email.AttachmentBase;
 import com.aspose.email.EmlLoadOptions;
 import com.aspose.email.EmlSaveOptions;
 import com.aspose.email.FileCompatibilityMode;
@@ -17,6 +18,7 @@ import com.aspose.email.MhtSaveOptions;
 import com.aspose.email.MsgLoadOptions;
 import com.aspose.email.MsgSaveOptions;
 import com.aspose.email.SaveOptions;
+import com.aspose.email.SaveResourceHandler;
 import com.aspose.email.examples.Utils;
 
 public class ConvertEmailMessages {
@@ -57,6 +59,9 @@ public class ConvertEmailMessages {
 		
 		// Status of Recipients from a Meeting Request
 		statusOfRecipientsFromAMeetingRequest(dataDir);
+		
+		// Convert to HTML without embedding resources
+		convertToHtmlWithoutEmbeddedResources(dataDir);
 	}
 
 	public static void loadingEMLAndSavingAsEML(String dataDir) {
@@ -122,7 +127,7 @@ public class ConvertEmailMessages {
 
 	public static void savingMessageAsHTML(String dataDir) {
 		MailMessage msg = MailMessage.load(dataDir + "Message.msg");
-		msg.save(dataDir + "SavingMessageAsHTML_out1.html", SaveOptions.getDefaultHtml());
+		msg.save(dataDir + "SavingMessageAsHTML1_out.html", SaveOptions.getDefaultHtml());
 
 		//or
 
@@ -130,7 +135,7 @@ public class ConvertEmailMessages {
 		HtmlSaveOptions options = SaveOptions.getDefaultHtml();
 		options.setEmbedResources(false);
 		options.setHtmlFormatOptions(HtmlFormatOptions.WriteHeader | HtmlFormatOptions.WriteCompleteEmailAddress);
-		eml.save(dataDir + "SavingMessageAsHTML_out2.html", options);
+		eml.save(dataDir + "SavingMessageAsHTML2_out.html", options);
 	}
 
 	public static void preservingOriginalEmailAddress(String dataDir) {
@@ -166,6 +171,31 @@ public class ConvertEmailMessages {
 
 		eml.save(dataDir + "EmlToMhtmlWithoutInlineImages_out.mht", mhtSaveOptions);
 		//ExEnd: ConvertToMHTMLWithoutInlineImages
+	}
+	
+	public static void convertToHtmlWithoutEmbeddedResources(String dataDir)
+	{
+		//ExStart: SavingasHTMLwithoutEmbeddingResources
+		String fileName = dataDir + "EmailWithAttandEmbedded.eml";
+		MailMessage eml = MailMessage.load(fileName);
+
+		//final String outDir = "out path";
+		String outFileName = "EmailWithAttandEmbedded_out.html";
+
+		HtmlSaveOptions options = new HtmlSaveOptions();
+		options.setEmbedResources(false);
+		options.setSaveResourceHandler(new SaveResourceHandler() {
+		    
+		    @Override
+		    public void invoke(AttachmentBase attachment, String[] resourcePath) {
+		    	String dataDir = Utils.getSharedDataDir(ConvertEmailMessages.class) + "email/";
+		        attachment.save(dataDir + attachment.getContentId());
+		        resourcePath[0] = dataDir + attachment.getContentId();
+		    }
+		});
+
+		eml.save(dataDir + outFileName, options);
+		//ExEnd: SavingasHTMLwithoutEmbeddingResources
 	}
 
 }
