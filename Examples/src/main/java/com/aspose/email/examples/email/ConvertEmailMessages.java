@@ -127,7 +127,7 @@ public class ConvertEmailMessages {
 
 	public static void savingMessageAsHTML(String dataDir) {
 		MailMessage msg = MailMessage.load(dataDir + "Message.msg");
-		msg.save(dataDir + "SavingMessageAsHTML_out1.html", SaveOptions.getDefaultHtml());
+		msg.save(dataDir + "SavingMessageAsHTML1_out.html", SaveOptions.getDefaultHtml());
 
 		//or
 
@@ -135,7 +135,7 @@ public class ConvertEmailMessages {
 		HtmlSaveOptions options = SaveOptions.getDefaultHtml();
 		options.setEmbedResources(false);
 		options.setHtmlFormatOptions(HtmlFormatOptions.WriteHeader | HtmlFormatOptions.WriteCompleteEmailAddress);
-		eml.save(dataDir + "SavingMessageAsHTML_out2.html", options);
+		eml.save(dataDir + "SavingMessageAsHTML2_out.html", options);
 	}
 
 	public static void preservingOriginalEmailAddress(String dataDir) {
