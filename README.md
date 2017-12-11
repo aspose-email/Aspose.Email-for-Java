@@ -1,6 +1,6 @@
 # Aspose.Email for Java
 
-This repository contains [Examples](Examples), [Plugins](Plugins) and projects that will help you to write your own application using [Aspose.Email for Java](https://www.aspose.com/products/email/java).
+This repository contains [Examples](Examples), [Plugins](Plugins) and projects that will help you to write your own application using [Aspose.Email for Java](https://products.aspose.com/email/java).
 
 <p align="center">
   <a title="Download complete Aspose.Email for Java source code" href="https://github.com/asposeemail/Aspose_Email_Java/archive/master.zip">
