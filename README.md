@@ -18,7 +18,7 @@ Directory  | Description
 ## Resources
 
 + **Website:** [www.aspose.com](https://www.aspose.com/)
-+ **Product Home:** [Aspose.Email for Java](https://www.aspose.com/products/email/java)
++ **Product Home:** [Aspose.Email for Java](https://products.aspose.com/email/java)
 + **Download:** [Download Aspose.Email for Java](https://downloads.aspose.com/email/java)
 + **Documentation:** [Aspose.Email for Java Documentation](https://docs.aspose.com/display/emailjava/Home)
 + **Forum:** [Aspose.Email for Java Forum](https://forum.aspose.com/c/email)
