@@ -28,6 +28,8 @@ public class StringSearchingInPSTWithIgnoreCase {
 
 			MailQuery query = builder.getQuery();
 			MessageInfoCollection coll = fi.getContents(query);
+			
+			System.out.println(coll.size());
 		} finally {
 			if (pst != null)
 				((IDisposable) pst).dispose();

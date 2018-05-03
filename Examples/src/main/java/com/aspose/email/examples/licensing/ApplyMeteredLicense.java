@@ -4,7 +4,6 @@ import com.aspose.email.MailMessage;
 import com.aspose.email.Metered;
 import com.aspose.email.examples.Utils;
 import com.aspose.email.examples.email.DisplayEmailInformation;
-import com.aspose.email.examples.email.EmailHeaders;
 
 public class ApplyMeteredLicense {
 

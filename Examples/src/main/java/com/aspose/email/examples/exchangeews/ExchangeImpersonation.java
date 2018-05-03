@@ -1,5 +1,6 @@
 package com.aspose.email.examples.exchangeews;
 
+import com.aspose.email.DeletionOptions;
 import com.aspose.email.EWSClient;
 import com.aspose.email.ExchangeMessageInfo;
 import com.aspose.email.ExchangeMessageInfoCollection;
@@ -16,12 +17,12 @@ public class ExchangeImpersonation {
 		String folder = "Drafts";
 		try {
 			for (ExchangeMessageInfo messageInfo : client1.listMessages(folder))
-				client1.deleteMessage(messageInfo.getUniqueUri());
+				client1.deleteItem(messageInfo.getUniqueUri(), DeletionOptions.getDeletePermanently());
 			String subj1 = String.format("NETWORKNET_33354 {0} {1}", "User", "User1");
 			client1.appendMessage(folder, new MailMessage("User1@exchange.conholdate.local", "To@aspsoe.com", subj1, ""));
 
 			for (ExchangeMessageInfo messageInfo : client2.listMessages(folder))
-				client2.deleteMessage(messageInfo.getUniqueUri());
+				client2.deleteItem(messageInfo.getUniqueUri(), DeletionOptions.getDeletePermanently());
 			String subj2 = String.format("NETWORKNET_33354 {0} {1}", "User", "User2");
 			client2.appendMessage(folder, new MailMessage("User2@exchange.conholdate.local", "To@aspose.com", subj2, ""));
 
@@ -46,9 +47,9 @@ public class ExchangeImpersonation {
 		} finally {
 			try {
 				for (ExchangeMessageInfo messageInfo : client1.listMessages(folder))
-					client1.deleteMessage(messageInfo.getUniqueUri());
+					client1.deleteItem(messageInfo.getUniqueUri(), DeletionOptions.getDeletePermanently());
 				for (ExchangeMessageInfo messageInfo : client2.listMessages(folder))
-					client2.deleteMessage(messageInfo.getUniqueUri());
+					client2.deleteItem(messageInfo.getUniqueUri(), DeletionOptions.getDeletePermanently());
 			} catch (Exception ex) {
 			}
 		}

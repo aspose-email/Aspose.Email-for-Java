@@ -1,6 +1,7 @@
 package com.aspose.email.examples.exchangeews;
 
 import com.aspose.email.Contact;
+import com.aspose.email.DeletionOptions;
 import com.aspose.email.EWSClient;
 import com.aspose.email.IEWSClient;
 
@@ -13,7 +14,7 @@ public class DeleteContactsInformation {
 		Contact[] contacts = client.getContacts(client.getMailboxInfo().getContactsUri());
 		for (Contact contact : contacts) {
 			if (contact.getDisplayName().equals(strContactToDelete))
-				client.deleteContact(contact);
+				client.deleteItem(contact.getId().getEWSId(), DeletionOptions.getDeletePermanently());
 		}
 		client.dispose();
 	}

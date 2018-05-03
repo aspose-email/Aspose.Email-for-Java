@@ -1,18 +1,11 @@
 package com.aspose.email.examples.outlook.msg;
 
-import java.util.UUID;
-
 import com.aspose.email.BodyContentType;
 import com.aspose.email.MapiMessage;
-import com.aspose.email.MapiNamedProperty;
 import com.aspose.email.MapiProperty;
 import com.aspose.email.MapiPropertyCollection;
 import com.aspose.email.MapiPropertyTag;
-import com.aspose.email.MapiPropertyType;
 import com.aspose.email.examples.Utils;
-import com.aspose.email.system.BitConverter;
-import com.aspose.email.system.collections.ArrayList;
-import com.aspose.email.system.collections.IList;
 
 public class SetAndAccessOutlookMAPIProperties {
 

@@ -3,7 +3,6 @@ package com.aspose.email.examples.email;
 import com.aspose.email.*;
 import com.aspose.email.examples.Utils;
 
-import java.nio.charset.Charset;
 import java.util.Date;
 
 /*

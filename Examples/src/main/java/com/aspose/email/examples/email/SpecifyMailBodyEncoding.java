@@ -1,6 +1,5 @@
 package com.aspose.email.examples.email;
 
-import com.aspose.email.AlternateView;
 import com.aspose.email.MailAddress;
 import com.aspose.email.MailMessage;
 import com.aspose.email.SmtpClient;
