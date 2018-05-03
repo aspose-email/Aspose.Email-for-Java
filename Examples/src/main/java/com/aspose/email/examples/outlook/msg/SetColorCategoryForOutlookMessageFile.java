@@ -21,6 +21,8 @@ public class SetColorCategoryForOutlookMessageFile {
 		// Retrieve the list of available categories
 		IList categories = FollowUpManager.getCategories(msg);
 
+		System.out.println(categories.size());
+		
 		// Remove the specified category
 		FollowUpManager.removeCategory(msg, "Red Category");
 

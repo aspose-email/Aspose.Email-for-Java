@@ -6,7 +6,6 @@ import com.aspose.email.Appointment;
 import com.aspose.email.MailAddress;
 import com.aspose.email.MailAddressCollection;
 import com.aspose.email.ParticipationStatus;
-import com.aspose.email.system.DateTime;
 
 public class WorkingWithAppointments {
 

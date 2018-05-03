@@ -1,5 +1,6 @@
 package com.aspose.email.examples.exchangeews;
 
+import com.aspose.email.DeletionOptions;
 import com.aspose.email.EWSClient;
 import com.aspose.email.ExchangeMailboxInfo;
 import com.aspose.email.ExchangeMessageInfo;
@@ -24,7 +25,7 @@ public class DeleteMessagesFromExchangeServer {
 			// Delete message based on some criteria
 			if (msgInfo.getSubject() != null && msgInfo.getSubject().contains("delete") == true) {
 				// Delete it
-				client.deleteMessage(msgInfo.getUniqueUri());
+				client.deleteItem(msgInfo.getUniqueUri(), DeletionOptions.getDeletePermanently());
 				System.out.println("Message deleted...." + msgInfo.getSubject());
 			} else {
 				// Do something else

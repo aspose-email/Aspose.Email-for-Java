@@ -96,7 +96,7 @@ public class Tasks {
 			// Check if the current task fulfills the search criteria
 			if (task.getSubject().equals("test")) {
 				//Delete task from exchange
-				client.deleteTask(task.getUniqueUri(), DeleteTaskOptions.DeletePermanently);
+				client.deleteItem(task.getUniqueUri(), DeletionOptions.getDeletePermanently());
 			}
 		}
 	}

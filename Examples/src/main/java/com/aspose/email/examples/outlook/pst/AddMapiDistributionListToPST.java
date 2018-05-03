@@ -29,6 +29,8 @@ public class AddMapiDistributionListToPST {
 	public static void loadMapiDistributionList() {
 		MapiMessage msg = MapiMessage.fromFile(dataDir + "DistList.msg");
 		MapiDistributionList dlist = (MapiDistributionList) msg.toMapiMessageItem();
+		
+		System.out.println("Distribution List Name: " + dlist.getDisplayName());
 	}
 
 	public static void addMapiDistributionListToPST() {

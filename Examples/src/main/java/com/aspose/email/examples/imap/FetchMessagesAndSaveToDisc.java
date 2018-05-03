@@ -37,6 +37,8 @@ public class FetchMessagesAndSaveToDisc {
 
 		client.selectFolder(ImapFolderInfo.IN_BOX);
 		ImapMessageInfoCollection coll = client.listMessages();
+		
+		System.out.println(coll.size());
 	}
 
 	public static void listMessagesRecursivelyFromFolders() {

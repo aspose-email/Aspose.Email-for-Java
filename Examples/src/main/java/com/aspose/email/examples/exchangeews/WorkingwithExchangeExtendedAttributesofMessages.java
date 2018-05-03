@@ -5,7 +5,6 @@ import java.util.UUID;
 
 import com.aspose.email.EWSClient;
 import com.aspose.email.IEWSClient;
-import com.aspose.email.KnownPropertySets;
 import com.aspose.email.MapiMessage;
 import com.aspose.email.PidNamePropertyDescriptor;
 import com.aspose.email.PropertyDataType;
