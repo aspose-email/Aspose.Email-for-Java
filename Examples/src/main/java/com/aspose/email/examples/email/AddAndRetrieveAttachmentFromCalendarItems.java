@@ -10,10 +10,12 @@ import java.util.TimeZone;
 import com.aspose.email.Appointment;
 import com.aspose.email.AppointmentSaveFormat;
 import com.aspose.email.Attachment;
+
 import com.aspose.email.MailAddress;
 import com.aspose.email.MailAddressCollection;
 import com.aspose.email.WeeklyRecurrencePattern;
 import com.aspose.email.examples.Utils;
+
 
 public class AddAndRetrieveAttachmentFromCalendarItems {
 
