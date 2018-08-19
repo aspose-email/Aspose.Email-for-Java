@@ -51,7 +51,7 @@ public class DraftAppointmentRequest {
 		 * attendees, expected);
 		 */
 		//Set the Appointment as Draft
-		app.setMethod(AppointmentMethodType.Publish);
+		app.setMethodType(AppointmentMethodType.Publish);
 
 		message.addAlternateView(app.requestApointment());
 

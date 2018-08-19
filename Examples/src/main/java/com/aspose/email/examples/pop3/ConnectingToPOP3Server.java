@@ -1,5 +1,6 @@
 package com.aspose.email.examples.pop3;
 
+import com.aspose.email.HttpProxy;
 import com.aspose.email.Pop3Client;
 import com.aspose.email.SecurityOptions;
 
@@ -28,6 +29,21 @@ public class ConnectingToPOP3Server {
 		client.setUsername("username");
 		client.setPassword("password");
 		client.setSecurityOptions(SecurityOptions.Auto);
+	}
+	
+	public static void connectingToPOP3ServerUsingHTTPProxy()
+	{
+		//ExStart: connectingToPOP3ServerUsingHTTPProxy
+		HttpProxy proxy = new HttpProxy("18.222.124.59", 8080);
+		
+		Pop3Client client = new Pop3Client();
+		client.setHost("pop.domain.com");
+		client.setPort(110); //This can be different from server to server
+		client.setUsername("username");
+		client.setPassword("password");
+		
+		client.setProxy(proxy);
+		//ExEnd: connectingToPOP3ServerUsingHTTPProxy
 	}
 
 }

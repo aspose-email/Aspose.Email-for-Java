@@ -13,6 +13,8 @@ import com.aspose.email.ImapPageInfo;
 import com.aspose.email.ImapQueryBuilder;
 import com.aspose.email.MailQuery;
 import com.aspose.email.MailQueryBuilder;
+import com.aspose.email.PageInfo;
+import com.aspose.email.PageSettings;
 import com.aspose.email.SecurityOptions;
 import com.aspose.email.system.collections.generic.List;
 
@@ -181,14 +183,16 @@ public class FilterMessagesFromIMAPMailbox {
 		ImapMessageInfoCollection totalMessageInfoCol = client.listMessages(query);
 
 		List<ImapPageInfo> pages = new List<ImapPageInfo>();
-
+		PageSettings pageSettings = new PageSettings();
+		pageSettings.setFolderName(ImapFolderInfo.IN_BOX);
+		
 		//search the messages with paging support
-		ImapPageInfo pageInfo = client.listMessagesByPage(ImapFolderInfo.IN_BOX, query, itemsPerPage);
+		ImapPageInfo pageInfo = client.listMessagesByPage(query, new PageInfo(itemsPerPage, 0), pageSettings);
 
 		pages.add(pageInfo);
 
 		while (!pageInfo.getLastPage()) {
-			pageInfo = client.listMessagesByPage(ImapFolderInfo.IN_BOX, query, pageInfo.getNextPage());
+			pageInfo = client.listMessagesByPage(query, pageInfo.getNextPage(), pageSettings);
 
 			pages.add(pageInfo);
 		}
