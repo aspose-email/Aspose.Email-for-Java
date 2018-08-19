@@ -57,12 +57,14 @@ public class CreateAndSaveOutlookMessageFile {
         MapiConversionOptions options = new MapiConversionOptions();
         options.setUseBodyCompression(true);
         MapiMessage ae_mapi = MapiMessage.fromMailMessage(msg, options);
+        ae_mapi.dispose();
     }
 
     public static void bodyCompressionFlagSetToFalse(String dataDir) {
         MailMessage msg = MailMessage.load(dataDir + "message.msg");
         MapiConversionOptions options = new MapiConversionOptions();
         MapiMessage ae_mapi = MapiMessage.fromMailMessage(msg, options);
+        ae_mapi.dispose();
     }
 
     /**
@@ -77,6 +79,7 @@ public class CreateAndSaveOutlookMessageFile {
         MailConversionOptions options = new MailConversionOptions();
         options.setConvertAsTnef(true);
         MailMessage mail = msg.toMailMessage(options);
+        mail.dispose();
     }
 
 }

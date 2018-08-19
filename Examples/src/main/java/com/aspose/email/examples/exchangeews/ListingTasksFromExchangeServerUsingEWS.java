@@ -34,7 +34,6 @@ public class ListingTasksFromExchangeServerUsingEWS {
         int iTasksCount = taskCollection.size();
         for (int i = 0; i < iTasksCount; i++) {
             ExchangeTask task = (ExchangeTask) taskCollection.get_Item(i);
-            System.out.println(task.getTimezoneId());
             System.out.println(task.getSubject());
             System.out.println(task.getStartDate());
             System.out.println(task.getDueDate());
@@ -56,7 +55,6 @@ public class ListingTasksFromExchangeServerUsingEWS {
         iTasksCount = taskCollection.size();
         for (int i = 0; i < iTasksCount; i++) {
             ExchangeTask task = (ExchangeTask) taskCollection.get_Item(i);
-            System.out.println(task.getTimezoneId());
             System.out.println(task.getSubject());
             System.out.println(task.getStartDate());
             System.out.println(task.getDueDate());

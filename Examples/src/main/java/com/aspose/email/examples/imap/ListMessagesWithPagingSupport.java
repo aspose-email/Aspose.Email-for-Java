@@ -2,6 +2,7 @@ package com.aspose.email.examples.imap;
 
 import com.aspose.email.ImapClient;
 import com.aspose.email.ImapPageInfo;
+import com.aspose.email.PageSettings;
 import com.aspose.email.SecurityOptions;
 import com.aspose.email.system.IDisposable;
 import com.aspose.email.system.collections.generic.List;
@@ -17,14 +18,13 @@ public class ListMessagesWithPagingSupport {
 			// Number of items per page
 			int itemsPerPage = 5;
 			List<ImapPageInfo> pages = new List<ImapPageInfo>();
-
-			ImapPageInfo pageInfo = client.listMessagesByPage(itemsPerPage);
+			PageSettings pageSettings = new PageSettings();
+			ImapPageInfo pageInfo = client.listMessagesByPage(itemsPerPage, 0, pageSettings);
 
 			pages.addItem(pageInfo);
 
 			while (!pageInfo.getLastPage()) {
-				pageInfo = client.listMessagesByPage(pageInfo.getNextPage());
-				pages.addItem(pageInfo);
+				 pageInfo = client.listMessagesByPage(itemsPerPage, pageInfo.getNextPage().getPageOffset(), pageSettings);
 			}
 
 			//Verify the count of retrieved items
