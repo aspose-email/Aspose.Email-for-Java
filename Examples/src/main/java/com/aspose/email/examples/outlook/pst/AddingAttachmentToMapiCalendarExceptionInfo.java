@@ -20,6 +20,7 @@ import com.aspose.email.StandardIpmFolder;
 public class AddingAttachmentToMapiCalendarExceptionInfo {
 	
 	public static void main(String[] args) {
+		//ExStart: AddingAttachmentToMapiCalendarExceptionInfo
 		Date startDate = addHours(newDate(2018, 7, 19), 12);
 		MapiCalendar calendar = new MapiCalendar("location1", "summary1", "description1", startDate, addHours(startDate, 1));
 
@@ -53,6 +54,7 @@ public class AddingAttachmentToMapiCalendarExceptionInfo {
 		    newFolder.addMapiMessageItem(calendar);
 		}
 		finally { newPst.dispose(); }
+		//ExEnd: AddingAttachmentToMapiCalendarExceptionInfo
 	}
 			private static Date newDate(int y, int m, int d) {
 			    java.util.Calendar c = java.util.Calendar.getInstance();

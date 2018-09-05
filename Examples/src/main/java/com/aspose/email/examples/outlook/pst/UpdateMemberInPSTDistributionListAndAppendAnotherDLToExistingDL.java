@@ -21,6 +21,7 @@ public class UpdateMemberInPSTDistributionListAndAppendAnotherDLToExistingDL {
 	}
 
 	private static void UpdateMemberInPSTDLAndAppendAnotherDLToExistingDL() throws Exception {
+		//ExStart: UpdateMemberInPSTDistributionListAndAppendAnotherDLToExistingDL
 		PersonalStorage personalStorage = PersonalStorage.create("testDL.pst", FileFormatVersion.Unicode);
 		try {
 		    // Add the contact folder to PST
@@ -77,6 +78,7 @@ public class UpdateMemberInPSTDistributionListAndAppendAnotherDLToExistingDL {
 		} finally {
 		    personalStorage.dispose();
 		}
+		//ExEnd: UpdateMemberInPSTDistributionListAndAppendAnotherDLToExistingDL
 	}
 	
 	private static byte[] fromBase64String(String data) {

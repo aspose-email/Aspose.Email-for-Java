@@ -9,6 +9,7 @@ import com.aspose.email.MapiContact;
 
 public class CreateContactInSubFolderOfContacts {
 	public static void main(String[] args) {
+		//ExStart: CreateContactInSubFolderOfContacts
 		IEWSClient client = EWSClient.getEWSClient("https://exchange.domain.com/exchangeews/Exchange.asmx", "username", "password", "domain.com");
 		ExchangeFolderInfo folderInfo = client.createFolder("myfolder", ExchangeFolderType.Contact);
 		client.createContact(folderInfo.getUri(), new MapiContact("MapiContact", "foo@gmail.com"));
@@ -16,5 +17,6 @@ public class CreateContactInSubFolderOfContacts {
 		contact.setDisplayName("Contact");
 		client.createContact(folderInfo.getUri(), contact);
 		MapiContact[] myfolderContacts = client.listContacts(folderInfo.getUri());
+		//ExEnd: CreateContactInSubFolderOfContacts
 	}
 }
