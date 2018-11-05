@@ -1,5 +1,6 @@
 package com.aspose.email.examples.smtp;
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -26,7 +27,7 @@ public class ForwardEmailWithoutUsingMailMessage {
 				
 		String fileName = "test.eml";
 		
-		FileOutputStream fos = new FileOutputStream(fileName); 
+		FileInputStream fos = new FileInputStream(fileName); 
 		
 		client.forward("Sender@doomain.com", recipients, fos);
 		       
