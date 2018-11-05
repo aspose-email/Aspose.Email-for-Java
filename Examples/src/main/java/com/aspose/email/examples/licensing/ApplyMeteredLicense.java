@@ -7,7 +7,7 @@ import com.aspose.email.examples.email.DisplayEmailInformation;
 
 public class ApplyMeteredLicense {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
 		//ExStart: ApplyMeteredLicense
