@@ -6,7 +6,7 @@ import com.aspose.email.examples.Utils;
 public class CreateFolderHierarchyUsingStringNotation {
 
 	public static void main(String[] args) {
-		//ExStart: CreateContactInSubFolderOfContacts
+		//ExStart: CreateFolderHierarchyUsingStringNotation
 		String dataDir = Utils.getSharedDataDir(AccessContactInformationFromPSTFile.class) + "outlook/";
 
 		PersonalStorage personalStorage = PersonalStorage.create(dataDir + "CreateFolderHierarchyUsingStringNotation.pst", FileFormatVersion.Unicode);
