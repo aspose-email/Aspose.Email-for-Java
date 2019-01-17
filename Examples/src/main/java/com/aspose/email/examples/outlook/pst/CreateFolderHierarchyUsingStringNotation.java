@@ -1,11 +1,6 @@
 package com.aspose.email.examples.outlook.pst;
 
-import com.aspose.email.FolderInfo;
-import com.aspose.email.MapiContact;
-import com.aspose.email.MapiMessage;
-import com.aspose.email.MessageInfo;
-import com.aspose.email.MessageInfoCollection;
-import com.aspose.email.PersonalStorage;
+import com.aspose.email.*;
 import com.aspose.email.examples.Utils;
 
 public class CreateFolderHierarchyUsingStringNotation {
