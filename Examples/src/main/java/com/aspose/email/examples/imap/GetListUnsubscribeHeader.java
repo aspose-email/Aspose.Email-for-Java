@@ -2,10 +2,10 @@ package com.aspose.email.examples.imap;
 
 import com.aspose.email.*;
 
-public class ChangeOrderOfEmails {
+public class GetListUnsubscribeHeader {
 
 	public static void main(String[] args) {
-		// ExStart:1
+		//ExStart: 1
 		ImapClient imapClient = new ImapClient();
 		imapClient.setHost("<HOST>");
 		imapClient.setPort(993);
@@ -14,15 +14,13 @@ public class ChangeOrderOfEmails {
 		imapClient.setSupportedEncryption(EncryptionProtocols.Tls);
 		imapClient.setSecurityOptions(SecurityOptions.SSLImplicit);
 
-		PageSettings pageSettings = new PageSettings();
-		pageSettings.setAscendingSorting(false);
-		ImapPageInfo pageInfo = imapClient.listMessagesByPage(5, pageSettings);
-		ImapMessageInfoCollection messages = pageInfo.getItems();
-
-		for (ImapMessageInfo message : messages)
+		ImapMessageInfoCollection messageInfoCol = imapClient.listMessages();
+		for (ImapMessageInfo imapMessageInfo : messageInfoCol)
 		{
-			System.out.println(message.getSubject() + " -> " + message.getDate().toString());
+			System.out.println("ListUnsubscribe Header: " + imapMessageInfo.getListUnsubscribe());
 		}
-		// ExEnd:1
+		//ExEnd: 1
+
+		System.out.println("GetListUnsubscribeHeader executed successfully.");
 	}
 }
