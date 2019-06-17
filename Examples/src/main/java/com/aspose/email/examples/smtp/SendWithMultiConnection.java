@@ -30,7 +30,7 @@ public class SendWithMultiConnection {
 		}
 
 		smtpClient.setConnectionsQuantity(5);
-		smtpClient.setUseMultyConnection(MultyConnectionMode.Enable);
+		smtpClient.setUseMultiConnection(MultiConnectionMode.Enable);
 		smtpClient.send(messages);
 		//ExEnd: 1
 

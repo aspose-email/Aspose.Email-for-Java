@@ -32,7 +32,7 @@ public class ImapGroupAppendWithMultiConnection {
 		}
 
 		imapClient.setConnectionsQuantity(5);
-		imapClient.setUseMultyConnection(MultyConnectionMode.Enable);
+		imapClient.setUseMultiConnection(MultiConnectionMode.Enable);
 		imapClient.appendMessages(messages);
 		//ExEnd: 1
 

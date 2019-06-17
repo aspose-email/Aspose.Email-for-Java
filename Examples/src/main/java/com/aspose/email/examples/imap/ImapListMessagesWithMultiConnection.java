@@ -16,12 +16,12 @@ public class ImapListMessagesWithMultiConnection {
 
 		imapClient.selectFolder("Inbox");
 		imapClient.setConnectionsQuantity(5);
-		imapClient.setUseMultyConnection(MultyConnectionMode.Enable);
+		imapClient.setUseMultiConnection(MultiConnectionMode.Enable);
 		long multiConnectionModeStartTime = System.nanoTime();
 		ImapMessageInfoCollection messageInfoCol1 = imapClient.listMessages(true);
 		long multiConnectionModeTimeSpan = (System.nanoTime() - multiConnectionModeStartTime);
 
-		imapClient.setUseMultyConnection(MultyConnectionMode.Disable);
+		imapClient.setUseMultiConnection(MultiConnectionMode.Disable);
 		long singleConnectionModeStartTime = System.nanoTime();
 		ImapMessageInfoCollection messageInfoCol2 = imapClient.listMessages(true);
 		long singleConnectionModeTimeSpan = (System.nanoTime() - singleConnectionModeStartTime);

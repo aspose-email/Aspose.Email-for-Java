@@ -17,12 +17,12 @@ public class Pop3ListMessagesWithMultiConnection {
 		pop3Client.setPassword("<PASSWORD>");
 
 		pop3Client.setConnectionsQuantity(5);
-		pop3Client.setUseMultyConnection(MultyConnectionMode.Enable);
+		pop3Client.setUseMultiConnection(MultiConnectionMode.Enable);
 		long multiConnectionModeStartTime = System.nanoTime();
 		Pop3MessageInfoCollection messageInfoCol1 = pop3Client.listMessages();
 		long multiConnectionModeTimeSpan = System.nanoTime() - multiConnectionModeStartTime;
 
-		pop3Client.setUseMultyConnection(MultyConnectionMode.Disable);
+		pop3Client.setUseMultiConnection(MultiConnectionMode.Disable);
 		long singleConnectionModeStartTime = System.nanoTime();
 		Pop3MessageInfoCollection messageInfoCol2 = pop3Client.listMessages();
 		long singleConnectionModeTimeSpan = System.nanoTime() - singleConnectionModeStartTime;
