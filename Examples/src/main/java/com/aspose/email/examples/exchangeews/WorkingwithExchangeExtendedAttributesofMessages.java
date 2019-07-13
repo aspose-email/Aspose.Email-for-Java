@@ -40,7 +40,7 @@ public class WorkingwithExchangeExtendedAttributesofMessages {
 		        String uri = client.appendMessage(message);
 
 		        //Fetch the message from server
-		        MapiMessage mapiMessage = client.fetchMapiMessage(uri, Arrays.asList(new PropertyDescriptor[] { pd }));
+		        MapiMessage mapiMessage = client.fetchItem(uri, Arrays.asList(new PropertyDescriptor[] { pd }));
 		        
 		        //Retrieve the property from the message
 		        String fetchedValue = mapiMessage.getNamedProperties().get_Item(pd).getString();

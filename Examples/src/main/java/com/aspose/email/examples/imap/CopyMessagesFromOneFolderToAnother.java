@@ -1,22 +1,17 @@
 package com.aspose.email.examples.imap;
 
-import com.aspose.email.ImapClient;
-import com.aspose.email.ImapFolderInfo;
-import com.aspose.email.ImapMessageInfo;
-import com.aspose.email.ImapMessageInfoCollection;
-import com.aspose.email.MailMessage;
+import com.aspose.email.*;
 import com.aspose.email.examples.Utils;
 import com.aspose.email.system.collections.generic.List;
 
 public class CopyMessagesFromOneFolderToAnother {
 		
 	public static void main(String[] args) throws InterruptedException {
-		// The path to the resource directory.
-		String dataDir = Utils.getSharedDataDir(CopyMessagesFromOneFolderToAnother.class) + "IMAP/";
 		
 		final ImapClient client = new ImapClient("exchange.domain.com", "username", "password");
+
 		try {
-			String folderName = dataDir + "EMAILNET-35242";
+			String folderName = "TestFolder";
 			if (!client.existFolder(folderName))
 				client.createFolder(folderName);
 			try {
@@ -56,7 +51,7 @@ public class CopyMessagesFromOneFolderToAnother {
 				t.add(uniqueId2);
 
 				//Copy the list of messages to the destination folder
-				client.copyMessagesByUids(t, folderName, true);
+				client.copyMessagesByUids(t, folderName);
 
 				//Now select the destination folder and verify that the messages have been copied to that folder
 				client.selectFolder(folderName);
