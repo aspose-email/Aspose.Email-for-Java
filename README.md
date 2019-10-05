@@ -1,8 +1,8 @@
 # Aspose.Email for Java
 
-[Aspose.Email for Java](https://products.aspose.com/email/java) is a complete set of Email Processing APIs to create, read and manipulate emails from within your applications. It makes it easier to work with a number of Outlook email message formats such as MSG, EML, EMLX and MHT files without the need of installing Microsoft Outlook. It also enables you to manage message storage files - Personal Storage Files (PST), Offline Storage Files (OST) along with message sending and receiving capabilities. You can also read and extract Outlook PST file that can be saved to disk in MSG format.
+[Aspose.Email for Java](https://products.aspose.com/email/java) is a complete set of Email Processing APIs to create, read and manipulate emails from within your applications. It makes it easier to work with many Outlook email message formats such as MSG, EML, EMLX and MHT files without the need of installing Microsoft Outlook. It also enables you to manage message storage files - Personal Storage Files (PST), Offline Storage Files (OST) along with message sending and receiving capabilities. You can also read and extract Outlook PST file that can be saved to disk in MSG format.
 
-This repository contains [Examples](Examples) and [Plugins](Plugins) for [Aspose.Email for Java](https://products.aspose.com/email/java) to help you learn and write your own applications.
+This repository contains [Examples](Examples) and [Plugins](Plugins) for [Aspose.Email for Java](https://products.aspose.com/email/java) to help you learn and write your applications.
 
 <p align="center">
   <a title="Download complete Aspose.Email for Java source code" href="https://github.com/asposeemail/Aspose_Email_Java/archive/master.zip">
@@ -10,7 +10,7 @@ This repository contains [Examples](Examples) and [Plugins](Plugins) for [Aspose
   </a>
 </p>
 
-Following is short description of contents of the repository:
+Following is a short description of the contents of the repository:
 
 Directory  | Description
 ---------- | -----------
@@ -21,13 +21,13 @@ Directory  | Description
 
 * You can either clone the repository using your favorite GitHub client or download the ZIP file from here.
 * Extract the contents of the ZIP file to any folder on your computer. All the examples are located in the **Examples** folder.
-* You can run/execute these examples with any IDE of you choice.
+* You can run/execute these examples with any IDE of your choice.
 * Open the project in your selected IDE.
 * Open the example file that you want to run.
 * Run the file in your IDE (method may vary depending on the IDE you use).
-* resources folder in Examples/src/main folder contains input files used in the examples. It is mandatory that you download this folder along with the examples project.
+* The resources folder in the Examples/src/main folder contains input files used in the examples. It is mandatory that you download this folder along with the examples project.
 
-Please find more details for how to run the examples [here](https://docs.aspose.com/display/emailjava/How+to+Run+the+Examples).
+Please find more details on how to run the examples [here](https://docs.aspose.com/display/emailjava/How+to+Run+the+Examples).
 
 ## Resources
 
