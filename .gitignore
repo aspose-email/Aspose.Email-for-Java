@@ -21,7 +21,6 @@ generated/
 bin/
 *.ldb
 _ReSharper*/
-*.eml
 out/
 *.user
 *.resx
