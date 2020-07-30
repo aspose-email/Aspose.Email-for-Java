@@ -1,39 +1,65 @@
-# Aspose.Email for Java
+# Java Email API
 
 [Aspose.Email for Java](https://products.aspose.com/email/java) is a complete set of Email Processing APIs to create, read and manipulate emails from within your applications. It makes it easier to work with many Outlook email message formats such as MSG, EML, EMLX and MHT files without the need of installing Microsoft Outlook. It also enables you to manage message storage files - Personal Storage Files (PST), Offline Storage Files (OST) along with message sending and receiving capabilities. You can also read and extract Outlook PST file that can be saved to disk in MSG format.
 
-This repository contains [Examples](Examples) and [Plugins](Plugins) for [Aspose.Email for Java](https://products.aspose.com/email/java) to help you learn and write your applications.
+Directory | Description
+--------- | -----------
+[Examples](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples) | A collection of Java examples that help you learn the product features.
+[Plugins](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Plugins) | Plugins that will demonstrate one or more features of Aspose.Email for Java.
 
 <p align="center">
   <a title="Download complete Aspose.Email for Java source code" href="https://github.com/asposeemail/Aspose_Email_Java/archive/master.zip">
-    <img src="http://i.imgur.com/hwNhrGZ.png" />
+    <img src="https://raw.githubusercontent.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
 
-Following is a short description of the contents of the repository:
+## Email API Features
 
-Directory  | Description
----------- | -----------
-[Examples](Examples)  | A collection of Java examples that help you learn how to use product features
-[Plugins](Plugins)  | Plugins that will demonstrate one or more features of Aspose.Email for Java
+- Create and Set contents of MIME messages.
+- Extract message contents from emails.
+- Load and save [appointment in ICS format](https://docs.aspose.com/display/emailjava/Working+with+Appointments#WorkingwithAppointments-LoadandSaveAppointmentinICSFormat).
+- Ability to connect to SMTP, POP3, IMAP, Exchange server.
+- Works with Thunderbird, Zimbra and IBM Notes.
 
-## How to Run the Examples
+## Read & Write Email Formats
 
-* You can either clone the repository using your favorite GitHub client or download the ZIP file from here.
-* Extract the contents of the ZIP file to any folder on your computer. All the examples are located in the **Examples** folder.
-* You can run/execute these examples with any IDE of your choice.
-* Open the project in your selected IDE.
-* Open the example file that you want to run.
-* Run the file in your IDE (method may vary depending on the IDE you use).
-* The resources folder in the Examples/src/main folder contains input files used in the examples. It is mandatory that you download this folder along with the examples project.
+**Microsoft Outlook:** MSG, PST, OST, OFT\
+**Email:** EML, EMLX, MBOX\
+**Others:** ICS, VCF, HTML, MHTML
 
-Please find more details on how to run the examples [here](https://docs.aspose.com/display/emailjava/How+to+Run+the+Examples).
+## Read Email Formats
 
-## Resources
+**Mac Outlook:** OLM
 
-* **Website:** [www.aspose.com](https://www.aspose.com/)
-* **Product Home:** [Aspose.Email for Java](https://products.aspose.com/email/java)
-* **Download:** [Download Aspose.Email for Java](https://downloads.aspose.com/email/java)
-* **Documentation:** [Aspose.Email for Java Documentation](https://docs.aspose.com/display/emailjava/Home)
-* **Forum:** [Aspose.Email for Java Forum](https://forum.aspose.com/c/email)
-* **Blog:** [Aspose.Email for Java Blog](https://blog.aspose.com/category/email/)
+## Supported Environments
+
+- **Microsoft Windows:** Windows Desktop & Server (x86, x64)
+- **macOS:** Mac OS X
+- **Linux:** Ubuntu, OpenSUSE, CentOS, and others
+- **Java Versions:** `J2SE 7.0 (1.7)`, `J2SE 8.0 (1.8)`
+
+## Get Started with Aspose.Email for Java
+
+Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-email). You can easily use Aspose.BarCode for Java API directly in your Maven projects with simple configurations. For the detailed instructions please visit [Installing Aspose.Email for Java from Maven Repository](https://docs.aspose.com/display/emailjava/Installation) documentation page.
+
+## Perform IMAP Message Backup Operation using Java
+
+```java
+ImapClient imapClient = new ImapClient();
+imapClient.setHost("<HOST>");
+imapClient.setPort(993);
+imapClient.setUsername("<USERNAME>");
+imapClient.setPassword("<PASSWORD>");
+imapClient.setSupportedEncryption(EncryptionProtocols.Tls);
+imapClient.setSecurityOptions(SecurityOptions.SSLImplicit);
+
+ImapMailboxInfo mailboxInfo = imapClient.getMailboxInfo();
+
+ImapFolderInfo info = imapClient.getFolderInfo(mailboxInfo.getInbox().getName());
+ImapFolderInfoCollection infos = new ImapFolderInfoCollection();
+infos.add(info);
+
+imapClient.backup(infos, dataDir + "\\ImapBackup.pst", BackupOptions.None);
+```
+
+[Product Page](https://products.aspose.com/email/java) | [Docs](https://docs.aspose.com/display/emailjava/Home) | [Demos](https://products.aspose.app/email/family) | [API Reference](https://docs.aspose.com/display/emailjava/Home) | [Examples](https://github.com/aspose-email/Aspose.Email-for-Java) | [Blog](https://blog.aspose.com/category/email/) | [Free Support](https://forum.aspose.com/c/email) | [Temporary License](https://purchase.aspose.com/temporary-license)
