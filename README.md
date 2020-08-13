@@ -17,7 +17,7 @@ Directory | Description
 
 - Create and Set contents of MIME messages.
 - Extract message contents from emails.
-- Load and save [appointment in ICS format](https://docs.aspose.com/display/emailjava/Working+with+Appointments#WorkingwithAppointments-LoadandSaveAppointmentinICSFormat).
+- Load and save [appointment in ICS format](https://docs.aspose.com/email/java/working-with-appointments/).
 - Ability to connect to SMTP, POP3, IMAP, Exchange server.
 - Works with Thunderbird, Zimbra and IBM Notes.
 
@@ -40,7 +40,7 @@ Directory | Description
 
 ## Get Started with Aspose.Email for Java
 
-Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-email). You can easily use Aspose.BarCode for Java API directly in your Maven projects with simple configurations. For the detailed instructions please visit [Installing Aspose.Email for Java from Maven Repository](https://docs.aspose.com/display/emailjava/Installation) documentation page.
+Aspose hosts all Java APIs at the [Aspose Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo/com/aspose/aspose-email). You can easily use Aspose.BarCode for Java API directly in your Maven projects with simple configurations. For the detailed instructions please visit [Installing Aspose.Email for Java from Maven Repository](https://docs.aspose.com/email/java/installation/) documentation page.
 
 ## Perform IMAP Message Backup Operation using Java
 
@@ -62,4 +62,4 @@ infos.add(info);
 imapClient.backup(infos, dataDir + "\\ImapBackup.pst", BackupOptions.None);
 ```
 
-[Product Page](https://products.aspose.com/email/java) | [Docs](https://docs.aspose.com/display/emailjava/Home) | [Demos](https://products.aspose.app/email/family) | [API Reference](https://docs.aspose.com/display/emailjava/Home) | [Examples](https://github.com/aspose-email/Aspose.Email-for-Java) | [Blog](https://blog.aspose.com/category/email/) | [Free Support](https://forum.aspose.com/c/email) | [Temporary License](https://purchase.aspose.com/temporary-license)
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/email/java) | [Docs](https://docs.aspose.com/email/java/) | [Demos](https://products.aspose.app/email/family) | [API Reference](https://apireference.aspose.com/email/java) | [Examples](https://github.com/aspose-email/Aspose.Email-for-Java) | [Blog](https://blog.aspose.com/category/email/) | [Free Support](https://forum.aspose.com/c/email) | [Temporary License](https://purchase.aspose.com/temporary-license)
