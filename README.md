@@ -15,8 +15,9 @@ Directory | Description
 
 ## Email API Features
 
+- Create messages from scratch or load existing email files for editing.
 - Create and Set contents of MIME messages.
-- Extract message contents from emails.
+- Extract contents from emails.
 - Load and save [appointment in ICS format](https://docs.aspose.com/email/java/working-with-appointments/).
 - Ability to connect to SMTP, POP3, IMAP, Exchange server.
 - Works with Thunderbird, Zimbra and IBM Notes.
