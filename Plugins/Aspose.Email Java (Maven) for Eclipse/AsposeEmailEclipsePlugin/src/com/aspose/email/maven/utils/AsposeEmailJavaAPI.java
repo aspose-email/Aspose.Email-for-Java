@@ -24,8 +24,8 @@ package com.aspose.email.maven.utils;
 public class AsposeEmailJavaAPI extends AsposeJavaAPI {
 
     private final String _name = AsposeConstants.API_NAME;
-    private final String _mavenRepositoryURL = "http://maven.aspose.com/repository/ext-release-local/com/aspose/aspose-email/";
-    private final String _remoteExamplesRepository = "https://github.com/asposeemail/Aspose_Email_Java";
+    private final String _mavenRepositoryURL = "https://repository.aspose.com/repo/com/aspose/aspose-email/";
+    private final String _remoteExamplesRepository = "https://github.com/aspose-email/Aspose.Email-for-Java";
 
     /**
      * @return the _name

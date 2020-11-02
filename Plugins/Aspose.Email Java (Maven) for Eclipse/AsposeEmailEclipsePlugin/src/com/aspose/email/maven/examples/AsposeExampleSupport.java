@@ -36,7 +36,7 @@ public class AsposeExampleSupport implements IRunnableWithProgress {
 
 	final static String localExampleFolder = "aspose/GitConsRepos/Aspose.Email/Examples";
 	final static String localExampleSourceFolder = "src/main/java/com/aspose/email/examples";
-	final static String localExampleResourceFolder = "src/main/resources/com/aspose/email/examples";
+	final static String localExampleResourceFolder = "src/main/resources/com/aspose/email/examples";	
 
 	public AsposeExampleSupport(String selectedProjectPath, String exampleCategory, IProject project) {
 		this.selectedProjectPath = selectedProjectPath;
@@ -74,9 +74,15 @@ public class AsposeExampleSupport implements IRunnableWithProgress {
 				+ File.separator + AsposeConstants.MAVEN_POM_XML;
 
 		try {						
-			FileUtils.copyDirectory(srcExampleCategoryPath, destExampleCategoryPath);
-			Files.copy(srcUtil, destUtil, StandardCopyOption.REPLACE_EXISTING);
-			FileUtils.copyDirectory(srcExampleResourceCategoryPath, destExampleResourceCategoryPath);
+			if(srcExampleCategoryPath.exists()) {
+				FileUtils.copyDirectory(srcExampleCategoryPath, destExampleCategoryPath);	
+			}					
+			if(srcUtil.toFile().exists()) {
+				Files.copy(srcUtil, destUtil, StandardCopyOption.REPLACE_EXISTING);	
+			}			
+			if(srcExampleResourceCategoryPath.exists()) {
+				FileUtils.copyDirectory(srcExampleResourceCategoryPath, destExampleResourceCategoryPath);				
+			}
 
 			NodeList examplesNoneAsposeDependencies = AsposeMavenProjectManager.getInstance()
 					.getDependenciesFromPOM(repositoryPOM_XML, AsposeConstants.ASPOSE_GROUP_ID);
