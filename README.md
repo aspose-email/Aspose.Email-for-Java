@@ -1,3 +1,4 @@
+![GitHub all releases](https://img.shields.io/github/downloads/aspose-email/Aspose.email-for-Java/total) ![GitHub](https://img.shields.io/github/license/aspose-email/Aspose.email-for-java)
 # Java Email API
 
 [Aspose.Email for Java](https://products.aspose.com/email/java) is a complete set of Email Processing APIs to create, read and manipulate emails from within your applications. It makes it easier to work with many Outlook email message formats such as MSG, EML, EMLX and MHT files without the need of installing Microsoft Outlook. It also enables you to manage message storage files - Personal Storage Files (PST), Offline Storage Files (OST) along with message sending and receiving capabilities. You can also read and extract Outlook PST file that can be saved to disk in MSG format.
