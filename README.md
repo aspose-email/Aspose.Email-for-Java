@@ -64,4 +64,4 @@ infos.add(info);
 imapClient.backup(infos, dataDir + "\\ImapBackup.pst", BackupOptions.None);
 ```
 
-[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/email/java) | [Docs](https://docs.aspose.com/email/java/) | [Demos](https://products.aspose.app/email/family) | [API Reference](https://apireference.aspose.com/email/java) | [Examples](https://github.com/aspose-email/Aspose.Email-for-Java) | [Blog](https://blog.aspose.com/category/email/) | [Free Support](https://forum.aspose.com/c/email) | [Temporary License](https://purchase.aspose.com/temporary-license)
+[Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/email/java) | [Docs](https://docs.aspose.com/email/java/) | [Demos](https://products.aspose.app/email/family) | [API Reference](https://apireference.aspose.com/email/java) | [Examples](https://github.com/aspose-email/Aspose.Email-for-Java) | [Blog](https://blog.aspose.com/category/email/) | [Search](https://search.aspose.com/) | [Free Support](https://forum.aspose.com/c/email) | [Temporary License](https://purchase.aspose.com/temporary-license)
